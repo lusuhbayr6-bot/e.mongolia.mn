@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>e-Mongolia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+ <div class="screen" id="screen">
+
+  <!-- НҮҮР -->
+  <section class="tab on" id="home">
+   <div class="top"><div class="logo"><b>e</b>mongolia</div><div class="icons"><span id="theme" title="Өнгө солих">◐</span><span>🔔</span><span>☰</span></div></div>
+   <h1>Төрийн үйлчилгээ, мэдээллийг нэг дороос</h1>
+   <label class="search"><span style="color:var(--blue)">🎙</span><input id="q" placeholder="Үйлчилгээ хайх" autocomplete="off"></label>
+   <div id="results" class="list" style="margin-top:12px;display:none"></div>
+   <div class="chips"><div class="chip">☁ Өдөр - °C</div><div class="chip">📅 <span id="date"></span></div><div class="chip">💵 3,599.28 ₮</div></div>
+   <div class="sec"><h2>Хөтөч</h2><a>Бүгд ›</a></div>
+   <div class="row"><div class="tile t1" data-go="Цэргийн алба">Цэргийн алба<span>🎖</span></div><div class="tile t2" data-go="Бичиг баримт">Бичиг баримт<span>🪪</span></div><div class="tile t3" data-go="Хүүхэд">Хүүхэд<span>🧸</span></div></div>
+   <div class="banner">Зөрчлийн торгуулийн төлбөр төлөх<br><small>Дэлгэрэнгүй</small></div>
+   <div class="stats">
+    <div class="stat wide">Хүн амын тоо<b>3,591,120 🇲🇳</b></div>
+    <div class="stat">Инфляцын түвшин<svg viewBox="0 0 100 30"><polyline fill="none" stroke="#4cc3f0" stroke-width="1.6" points="0,20 10,22 20,18 30,21 40,19 50,20 55,4 60,22 70,19 80,21 90,18 100,19"/></svg><b>13 %</b></div>
+    <div class="stat">Ажилгүйдлийн түвшин<b>5.5 % 💼</b></div>
+    <div class="stat">Ажиллах хүчний оролцоо<b>61.5 % 🤝</b></div>
+    <div class="stat">Дотоодын нийт бүтээгдэхүүн<b style="color:var(--blue)">52.5 их наяд</b></div>
+    <div class="stat">Малын тоо<b>58.1 сая 🐄</b></div>
+    <div class="stat">Дундаж цалин<b>2.5 сая 💰</b></div>
+    <div class="stat">Өрхийн дундаж орлого<b>3.0 сая 💵</b></div>
+   </div>
+  </section>
+
+  <!-- ҮЙЛЧИЛГЭЭ -->
+  <section class="tab" id="services">
+   <div class="top"><div class="logo"><b>e</b>mongolia</div></div>
+   <div class="sec"><h2>Үйлчилгээ</h2></div>
+   <div class="list" id="svcList"></div>
+  </section>
+
+  <!-- НЭМЭЛТ -->
+  <section class="tab" id="more">
+   <div class="top"><div class="logo"><b>e</b>mongolia</div></div>
+   <div class="sec"><h2>Нэмэлт</h2></div>
+   <div class="list">
+    <div class="item" tabindex="0" data-toast="Тохиргоо удахгүй"><i>⚙</i>Тохиргоо<em>›</em></div>
+    <div class="item" tabindex="0" data-toast="Тусламж удахгүй"><i>❓</i>Тусламж<em>›</em></div>
+    <div class="item" tabindex="0" data-toast="Хэл: Монгол"><i>🌐</i>Хэл<em>Монгол</em></div>
+   </div>
+  </section>
+
+  <!-- ПРОФАЙЛ -->
+  <section class="tab" id="profile">
+   <div class="top"><div class="logo"><b>e</b>mongolia</div></div>
+   <div class="who"><div class="av">Н</div><div><strong>А.Даваажаргал</strong><small>132035726313@e-mongolia.mn</small></div></div>
+
+   <div class="sec" style="margin-top:20px"><h2>Миний бичиг баримтууд</h2><a id="clearPhoto"></a></div>
+   <p class="hint"></p>
+
+   <!-- Гурван картын слайдер -->
+   <div class="slider" id="slider">
+
+    <article class="slide card-id">
+     <button class="photo-slot" aria-label="Иргэний үнэмлэх: зураг оруулах"><img class="photo" alt="Иргэний үнэмлэх"><span class="ph">＋<br>Зураг<small>Иргэний үнэмлэх</small></span></button>
+    </article>
+
+    <article class="slide card-drive">
+     <button class="photo-slot" aria-label="Жолооны үнэмлэх: зураг оруулах"><img class="photo" alt="Жолооны үнэмлэх"><span class="ph">＋<br>Зураг<small>Жолооны үнэмлэх</small></span></button>
+    </article>
+
+    <article class="slide card-student">
+     <button class="photo-slot" aria-label="Оюутны үнэмлэх: зураг оруулах"><img class="photo" alt="Оюутны үнэмлэх"><span class="ph">＋<br>Зураг<small>Оюутны үнэмлэх</small></span></button>
+    </article>
+   </div>
+   <div class="dots" id="dots"></div>
+   <input type="file" id="photoInput" accept="image/*" hidden>
+
+   <div class="list">
+    <div class="item" tabindex="0" data-toast="Төрд байгаа миний мэдээлэл"><i>📁</i>Төрд байгаа миний мэдээлэл<em>›</em></div>
+    <div class="item" tabindex="0" data-toast="Цахим хэтэвч"><i>👛</i>Цахим хэтэвч<em>›</em></div>
+   </div>
+   <div class="list">
+    <div class="item" tabindex="0" data-toast="Үйлчилгээний түүх"><i>📄</i>Үйлчилгээний түүх<em>›</em></div>
+   </div>
+  </section>
+ </div>
+
+ <nav class="nav">
+  <button class="on" data-tab="home"><span class="ic">⌂</span>Нүүр</button>
+  <button data-tab="services"><span class="ic">▤</span>Үйлчилгээ</button>
+  <button class="qr" data-toast="QR уншуулах" aria-label="QR"><span class="ic">▣</span></button>
+  <button data-tab="more"><span class="ic">▦</span>Нэмэлт</button>
+  <button data-tab="profile"><span class="ic">◯</span>Профайл</button>
+ </nav>
+ <div class="toast" id="toast"></div>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
